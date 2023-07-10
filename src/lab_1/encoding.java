@@ -10,7 +10,6 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.ApplicationFrame;
-import org.jfree.ui.RefineryUtilities;
 
 import java.awt.*;
 import java.util.Scanner;
@@ -36,47 +35,36 @@ public class encoding  extends ApplicationFrame {
         renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
         plot.setRenderer( renderer );
         setContentPane( chartPanel );
-//        encoding chart = new encoding(inputt);
         super.pack( );
-//        RefineryUtilities.centerFrameOnScreen( self );
         super.setVisible( true );
 
     }
 
     private XYDataset createDataset(int[] input ) {
-        final XYSeries firefox = new XYSeries( "input" );
+        final XYSeries dataa = new XYSeries( "input" );
         int time = 0;
-        firefox.add( 0.0 , 0.0 );
+        dataa.add( 0.0 , 0.0 );
 
         for (int i :input){
-            firefox.add( time , i );
+            dataa.add( time , i );
             time++;
-            firefox.add(time,i);
+            dataa.add(time,i);
         }
-//        firefox.add( 0.0 , 1.0 );
-//        firefox.add( 1.0 , 1.0 );
-//        firefox.add( 1.0 , 0.0 );
-//        firefox.add( 2.0 , 0.0 );
-//        firefox.add( 2.0 , 1.0 );
-//        firefox.add( 3.0 , 1.0 );
-//        firefox.add( 3.0 , 0.0 );
+        dataa.add(time,0);
         final XYSeriesCollection dataset = new XYSeriesCollection( );
-        dataset.addSeries( firefox );
+        dataset.addSeries( dataa );
         return dataset;
     }
 
     public static void main( String[ ] args ) {
         Scanner sc = new Scanner(System.in);
         int len = sc.nextInt();
-        int[] inputt  = new int[len];
-        int i = 0;
-        while (i<len) {
-            inputt[i]=sc.nextInt();
-            i++;
+        String[] digits = String.valueOf(len).split("");
+        len = digits.length;
+        int[] input  = new int[len];
+        for(int i=0;i<len;i++){
+            input[i]=Integer.parseInt(digits[i]);
         }
-        encoding chart = new encoding(inputt);
-        chart.pack( );
-        RefineryUtilities.centerFrameOnScreen( chart );
-        chart.setVisible( true );
+        encoding chart = new encoding(input);
     }
 }

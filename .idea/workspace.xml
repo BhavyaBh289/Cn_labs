@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edb8ce65-3fba-41a7-9347-cd4aec734528" name="Changes" comment="">
+    <list default="true" id="edb8ce65-3fba-41a7-9347-cd4aec734528" name="Changes" comment="working encoding and test file for demo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/encoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/encoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_1/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fe271f07-a976-4ff9-8be0-e53b92949c18" />
+        <option name="url" value="git@github.com:BhavyaBh289/Cn_labs.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
@@ -54,6 +66,37 @@
       <option name="presentableId" value="Default" />
       <updated>1688367885868</updated>
     </task>
+    <task id="LOCAL-00001" summary="working encoding and test file for demo">
+      <option name="closed" value="true" />
+      <created>1688972235391</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688972235391</updated>
+    </task>
+    <task id="LOCAL-00002" summary="working encoding and test file for demo">
+      <option name="closed" value="true" />
+      <created>1688972243454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688972243454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working encoding and test file for demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="working encoding and test file for demo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
