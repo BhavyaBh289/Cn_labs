@@ -13,9 +13,9 @@ public class polarrz {
         for(int i=0;i<len;i++){
             temp=Integer.parseInt(digits[i]);
             if (temp ==0){
-                inputt[2*i] = 1;
-            } else if (temp == 1) {
                 inputt[2*i] = -1;
+            } else if (temp == 1) {
+                inputt[2*i] = 1;
             }
             inputt[2*i+1]= 0;
         }
