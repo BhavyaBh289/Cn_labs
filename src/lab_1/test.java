@@ -1,9 +1,18 @@
 package lab_1;
 
+import java.util.Scanner;
+
 public class test {
-    public static void main(){
-//        int i = 5;
-        int[] tes =new int[5];
-        encoding en = new encoding(tes);
+    public static void main( String[ ] args ) {
+        Scanner sc = new Scanner(System.in);
+        int len = sc.nextInt();
+        int[] inputt  = new int[len];
+        int i = 0;
+        while (i<len) {
+            inputt[i]=sc.nextInt();
+            i++;
+        }
+        encoding en = new encoding(inputt);
+
     }
 }
