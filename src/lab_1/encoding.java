@@ -36,6 +36,11 @@ public class encoding  extends ApplicationFrame {
         renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
         plot.setRenderer( renderer );
         setContentPane( chartPanel );
+//        encoding chart = new encoding(inputt);
+        super.pack( );
+//        RefineryUtilities.centerFrameOnScreen( self );
+        super.setVisible( true );
+
     }
 
     private XYDataset createDataset(int[] input ) {
