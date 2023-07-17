@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class polarrz {
     public static void main(String[ ] args ) {
         Scanner sc = new Scanner(System.in);
-        int len = sc.nextInt();
-        String[] digits = String.valueOf(len).split("");
-        len = digits.length;
+        String lent = sc.next();
+        String[] digits = String.valueOf(lent).split("");
+        int len = digits.length;
         int[] inputt  = new int[2*len];
         int temp;
         for(int i=0;i<len;i++){
