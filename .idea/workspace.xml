@@ -7,9 +7,13 @@
     <list default="true" id="edb8ce65-3fba-41a7-9347-cd4aec734528" name="Changes" comment="modifying input type and  then working on manchester and differential manchester &#10;then merging all the above codes .s">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/encoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/encoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_1/manchester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/manchester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_1/manchester_diff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/manchester_diff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_1/merged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/merged.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/polarnrzi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/polarnrzi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/polarnrzl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/polarnrzl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/polarrz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/polarrz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_1/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_1/unipolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_1/unipolar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688976996366</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modifying input type and  then working on manchester and differential manchester &#10;then merging all the above codes .s">
+      <option name="closed" value="true" />
+      <created>1689576792026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689576792026</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -110,7 +122,8 @@
     <MESSAGE value="multiple basic encoding methods doneee" />
     <MESSAGE value="inverting polar return to zero" />
     <MESSAGE value="inverting polar return to zero and end of lab 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="inverting polar return to zero and end of lab 1" />
+    <MESSAGE value="modifying input type and  then working on manchester and differential manchester &#10;then merging all the above codes .s" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifying input type and  then working on manchester and differential manchester &#10;then merging all the above codes .s" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

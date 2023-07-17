@@ -20,7 +20,7 @@ public class manchester {
                 input[2*i+1]=1;
             }
         }
-        encoding en = new encoding(input);
+        encoding en = new encoding(input,0.5);
 
     }
 }

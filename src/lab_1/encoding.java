@@ -16,13 +16,13 @@ import java.util.Scanner;
 
 public class encoding  extends ApplicationFrame {
 
-    public encoding(int[] input) {
+    public encoding(int[] input,double timee) {
         super("Signal");
         JFreeChart xylineChart = ChartFactory.createXYLineChart(
                 "Signal" ,
                 "Time" ,
                 "Voltage" ,
-                createDataset(input) ,
+                createDataset(input,timee) ,
                 PlotOrientation.VERTICAL ,
                 true , true , false);
 
@@ -40,14 +40,14 @@ public class encoding  extends ApplicationFrame {
 
     }
 
-    private XYDataset createDataset(int[] input ) {
+    private XYDataset createDataset(int[] input ,double timee) {
         final XYSeries dataa = new XYSeries( "input" );
-        int time = 0;
+        double time = 0;
         dataa.add( 0.0 , 0.0 );
 
         for (int i :input){
             dataa.add( time , i );
-            time++;
+            time+=timee;
             dataa.add(time,i);
         }
         dataa.add(time,0);
@@ -65,6 +65,6 @@ public class encoding  extends ApplicationFrame {
         for(int i=0;i<len;i++){
             input[i]=Integer.parseInt(digits[i]);
         }
-        encoding chart = new encoding(input);
+        encoding chart = new encoding(input,1);
     }
 }

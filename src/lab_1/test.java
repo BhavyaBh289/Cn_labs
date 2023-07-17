@@ -12,7 +12,7 @@ public class test {
             inputt[i]=sc.nextInt();
             i++;
         }
-        encoding en = new encoding(inputt);
+        encoding en = new encoding(inputt,1);
 
     }
 }

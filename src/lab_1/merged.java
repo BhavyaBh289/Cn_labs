@@ -19,7 +19,7 @@ public class merged {
                 for(int i=0;i<len;i++){
                     inputt[i]=Integer.parseInt(digits[i]);
                 }
-                encoding en = new encoding(inputt);
+                encoding en = new encoding(inputt,1);
                 break;
             case 2:
 //                int[] inputt  = new int[len];
@@ -32,7 +32,7 @@ public class merged {
                         inputt[i]=-1;
                     }
                 }
-                encoding enc = new encoding(inputt);
+                encoding enc = new encoding(inputt,1);
                 break;
             case 3:
                 last = 1;
@@ -50,7 +50,7 @@ public class merged {
                         }
                     }
                 }
-                encoding ena = new encoding(inputt);
+                encoding ena = new encoding(inputt,1);
                 break;
             case 4:
                 for(int i=0;i<len;i++){
@@ -62,7 +62,7 @@ public class merged {
                     }
                     input[2*i+1]= 0;
                 }
-                encoding enb = new encoding(input);
+                encoding enb = new encoding(input,0.5);
                 break;
             case 5:
                 for(int i=0;i<len;i++){
@@ -75,7 +75,7 @@ public class merged {
                         input[2*i+1]=1;
                     }
                 }
-                encoding end = new encoding(input);
+                encoding end = new encoding(input,0.5);
                 break;
             case 6:
                 last = 1;
@@ -91,7 +91,7 @@ public class merged {
                         last= 1;
                     }
                 }
-                encoding ene = new encoding(input);
+                encoding ene = new encoding(input,0.5);
                 break;
         }
     }

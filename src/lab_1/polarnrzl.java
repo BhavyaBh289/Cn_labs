@@ -18,6 +18,6 @@ public class polarnrzl {
                 inputt[i]=-1;
             }
         }
-        encoding en = new encoding(inputt);
+        encoding en = new encoding(inputt,1);
     }
 }

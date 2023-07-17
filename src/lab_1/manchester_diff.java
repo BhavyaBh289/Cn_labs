@@ -24,6 +24,6 @@ public class manchester_diff {
                 last= 1;
             }
         }
-        encoding en = new encoding(input);
+        encoding en = new encoding(input,0.5);
     }
 }

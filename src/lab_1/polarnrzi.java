@@ -25,6 +25,6 @@ public class polarnrzi {
                 }
             }
         }
-        encoding en = new encoding(inputt);
+        encoding en = new encoding(inputt,1);
     }
 }

@@ -19,7 +19,7 @@ public class polarrz {
             }
             inputt[2*i+1]= 0;
         }
-        encoding en = new encoding(inputt);
+        encoding en = new encoding(inputt,0.5);
     }
 }
 

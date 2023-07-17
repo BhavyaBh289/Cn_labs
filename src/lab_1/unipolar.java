@@ -12,6 +12,6 @@ public class unipolar {
         for(int i=0;i<len;i++){
             input[i]=Integer.parseInt(digits[i]);
         }
-        encoding en = new encoding(input);
+        encoding en = new encoding(input,1);
     }
 }
