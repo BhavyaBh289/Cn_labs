@@ -4,18 +4,15 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <unistd.h>
-void calculateParity(int data[4], int parity[3])
-{
+void calculateParity(int data[4], int parity[3]){
     parity[0] = data[0] ^ data[1] ^ data[3];
     parity[1] = data[0] ^ data[2] ^ data[3];
     parity[2] = data[1] ^ data[2] ^ data[3];
 }
 
-int main()
-{
+int main(){
  int server_socket_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_socket_fd == -1)
-    {
+    if (server_socket_fd == -1){
         perror("Socket creation failed");
         return 1;
     }
@@ -25,15 +22,13 @@ int main()
     server_addr.sin_port = htons(12345);
     server_addr.sin_addr.s_addr = INADDR_ANY;
 
-    if (bind(server_socket_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1)
-    {
+    if (bind(server_socket_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1){
         perror("Binding failed");
         close(server_socket_fd);
         return 1;
     }
 
-    if (listen(server_socket_fd, 1) == -1)
-    {
+    if (listen(server_socket_fd, 1) == -1){
         perror("Listening failed");
         close(server_socket_fd);
         return 1;
@@ -42,8 +37,7 @@ int main()
     struct sockaddr_in client_addr;
     socklen_t client_len = sizeof(client_addr);
     int socket_fd = accept(server_socket_fd, (struct sockaddr *)&client_addr, &client_len);
-    if (socket_fd == -1)
-    {
+    if (socket_fd == -1){
         perror("Accepting connection failed");
         close(server_socket_fd);
         return 1;
@@ -68,28 +62,22 @@ int main()
     calculateParity(receivedData, calculatedParity);
 
     int errorBit = 0;
-    for (int i = 0; i < 3; i++)
-    {
-        if (receivedParity[i] != calculatedParity[i])
-        {
+    for (int i = 0; i < 3; i++){
+        if (receivedParity[i] != calculatedParity[i]){
             errorBit += (1 << i);
         }
     }
 
-    if (errorBit > 0)
-    {
+    if (errorBit > 0){
         printf("Error detected at bit position: %d\n", errorBit);
         receivedData[errorBit - 1] ^= 1;
     }
-    else
-    {
+    else{
         printf("No Error Detected.");
         printf("\nReceived message: %d %d %d %d\n", receivedData[0], receivedData[1], receivedData[2], receivedData[3]);
     }
     close(socket_fd);
     close(server_socket_fd);
-
-
     return 0;
 }
 
