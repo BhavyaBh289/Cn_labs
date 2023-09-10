@@ -39,21 +39,18 @@ int main(){
     int maxpackets,n,i;
     printf("Enter the number of packets ");
     scanf("%d", &maxpackets);
-    int winsize;
-    printf("Enter the number of packets in a window: ");
-    scanf("%d", &winsize);
     char packet [maxpackets];
     char data;
-    i = -1;
-    while(i<maxpackets-1){
+    i = 0;
+    while(i<maxpackets){
         scanf("%d %c", &n,&data);
         if(n==i+1){
             printf("ack %d sent",n);
-            packet[n]= data;
+            packet[n-1]= data;
             i++;
         }
     }
     for (int i = 0;i<maxpackets;i++){
-        printf("the %d packet's Data is %c \n",i,packet[i]);
+        printf("\nThe %d packet's Data is %c \n",i+1,packet[i]);
     }
 }

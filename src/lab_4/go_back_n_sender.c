@@ -31,17 +31,17 @@ int main(){
     char packet [maxpackets];
     char data;
     for (int i = 0;i<maxpackets;i++){
-        printf("Enter the %d packet's Data: ",i);
+        printf("Enter the %d packet's Data: ",i+1);
         scanf(" %c", &data);
         packet[i] = data;
     }
-    int ack = -1;
-    int i = -1;
-    while(ack<maxpackets-1){
+    int ack = 0;
+    int i = 0;
+    while(ack<maxpackets){
         // printf("%d %d %d",i,maxpackets,ack);
         if(i-ack<winsize&& i<maxpackets){
             i++;
-            printf("packet %d send  with data %c",i,packet[i]);
+            printf("packet %d send  with data %c",i,packet[i-1]);
         }
         scanf("%d",&n);
         if (n!=-1){
