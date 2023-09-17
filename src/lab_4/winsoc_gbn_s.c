@@ -1,28 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <unistd.h>
+#include <winsock2.h>
 struct transmit{
     int n;
     char c;
 };
 int main(){
-    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sockfd == -1){
+      WSADATA wsaData;
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
+    {
+        perror("WSAStartup failed");
+        return 1;
+    }
+
+    SOCKET sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd == INVALID_SOCKET)
+    {
         perror("Socket creation failed");
+        WSACleanup();
         return 1;
     }
 
     struct sockaddr_in server_addr;
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(1245);
+    server_addr.sin_port = htons(12345);
     server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1){
+    if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == SOCKET_ERROR)
+    {
         perror("Connection failed");
-        close(sockfd);
+        closesocket(sockfd);
+        WSACleanup();
         return 1;
     }
     int maxpackets,n;
@@ -57,5 +65,8 @@ int main(){
             }
         }
     }
-    close(sockfd);
+
+    closesocket(sockfd);
+    WSACleanup();
+
 }
