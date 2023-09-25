@@ -4,10 +4,18 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <stdbool.h>
 struct transmit{
     int n;
     char c;
 };
+bool checkpackets(bool ack[], int maxpackets){
+    for (int i=0;i<maxpackets;i++){
+        if(!ack[i])
+            return true;
+    }
+    return false;
+}
 int main(){
     int server_socket_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_socket_fd == -1){
@@ -44,18 +52,18 @@ int main(){
     printf("Enter the number of packets ");
     scanf("%d", &maxpackets);
     char packet [maxpackets];
+    bool ack [maxpackets];
     char data;
     i = 0;
     struct transmit t;
-    while(i<maxpackets){
+    while(checkpackets(ack,maxpackets)){
         if (recv(socket_fd, &t, sizeof(t), 0) != -1) {
             n=t.n;data=t.c;
-            if(n==i+1){
-                send(socket_fd, &n, sizeof(n), 0);
-                printf("ack %d sent\n",n);
-                packet[n-1]= data;
-                i++;
-            }
+            send(socket_fd, &n, sizeof(n), 0);
+            printf("ack %d sent\n",n);
+            ack[n-1]=true;
+            packet[n-1]= data;
+            i++;
         }
     }
     for (int i = 0;i<maxpackets;i++){

@@ -55,6 +55,9 @@ int main(){
             if(n==ack+1){
                 ack++;
             }else{
+                printf("\npacket %d send  with data %c",ack,packet[ack-1]);
+                t.n=i;t.c=packet[ack-1];
+                send(sockfd, &t, sizeof(t), 0);
                 i = ack;
             }
             // printf("%d %d %d",i,n,ack);

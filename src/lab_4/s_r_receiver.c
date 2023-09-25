@@ -4,6 +4,14 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <stdbool.h>
+bool checkpackets(bool ack[], int maxpackets){
+    for (int i=0;i<maxpackets;i++){
+        if(!ack[i])
+            return true;
+    }
+    return false;
+}
 int main(){
     // int server_socket_fd = socket(AF_INET, SOCK_STREAM, 0);
     // if (server_socket_fd == -1){
@@ -41,14 +49,13 @@ int main(){
     scanf("%d", &maxpackets);
     char packet [maxpackets];
     char data;
-    i = 0;
-    while(i<maxpackets){
+    bool ack [maxpackets];
+    while(checkpackets(ack,maxpackets)){
         scanf("%d %c", &n,&data);
-        if(n==i+1){
-            printf("ack %d sent",n);
-            packet[n-1]= data;
-            i++;
-        }
+        printf("ack %d sent\n",n);
+        ack[n-1]=true;
+        packet[n-1]= data;
+
     }
     for (int i = 0;i<maxpackets;i++){
         printf("\nThe %d packet's Data is %c \n",i+1,packet[i]);
