@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edb8ce65-3fba-41a7-9347-cd4aec734528" name="Changes" comment="modifying  basic time addition and refactoring all the previous codes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/go_back_n_receiver.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/go_back_n_receiver.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/go_back_n_sender.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/go_back_n_sender.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/r.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/s.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/s.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/soc_gbn_r.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/soc_gbn_r.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_4/soc_gbn_s.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_4/soc_gbn_s.c" afterDir="false" />
-    </list>
+    <list default="true" id="edb8ce65-3fba-41a7-9347-cd4aec734528" name="Changes" comment="modifying  basic time addition and refactoring all the previous codes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
